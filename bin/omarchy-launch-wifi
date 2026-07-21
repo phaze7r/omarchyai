@@ -1,3 +1,6 @@
 #!/bin/bash
 
-exec setsid uwsm app -- "$TERMINAL" --class=Impala -e impala "$@"
+# omarchy:summary=Launch the Omarchy wifi controls (provided by the Impala TUI).
+
+rfkill unblock wifi
+omarchy-launch-or-focus-tui impala

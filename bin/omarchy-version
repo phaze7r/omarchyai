@@ -1,3 +1,5 @@
 #!/bin/bash
 
-git -C "$OMARCHY_PATH" describe --tags $(git -C "$OMARCHY_PATH" rev-list --tags --max-count=1)
+# omarchy:summary=Print the installed Omarchy version
+
+cat $OMARCHY_PATH/version
